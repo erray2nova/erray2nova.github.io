@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя, Анастасия ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="magic-particles"></div>
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+    <div class="glow-sphere sphere-3"></div>
+
+    <div class="wrapper">
+        <header class="header-glass">
+            <div class="controls-panel">
+                <button id="theme-toggle" class="glass-btn icon-btn" title="Сменить тему">🌙</button>
+            </div>
+            
+            <div class="header-content">
+                <h1 class="site-title">Для тебя, Анастасия</h1>
+                <p class="site-subtitle">Пространство, наполненное моей любовью и искренностью</p>
+            </div>
+            
+            <nav class="tabs-navigation">
+                <button class="tab-btn active" data-tab="dashboard">Наш путь</button>
+                <button class="tab-btn" data-tab="poems">Мои стихи</button>
+                <button class="tab-btn" data-tab="secret">Секрет</button>
+            </nav>
+        </header>
+
+        <main class="content-container">
+            
+            <section id="dashboard-tab" class="tab-content active-content">
+                <div class="bento-grid">
+                    
+                    <div class="bento-card glass-card timer-card span-2">
+                        <div class="card-glow"></div>
+                        <h3>Мы вместе уже ✨</h3>
+                        <div id="time-counter" class="time-display">
+                            <div class="time-box"><span id="days">0</span><p>Дней</p></div>
+                            <div class="time-box"><span id="hours">0</span><p>Часов</p></div>
+                            <div class="time-box"><span id="minutes">0</span><p>Минут</p></div>
+                            <div class="time-box"><span id="seconds">0</span><p>Секунд</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card glass-card about-card">
+                        <div class="card-glow"></div>
+                        <h3>О нас 🤍</h3>
+                        <p class="card-desc">
+                            Здесь место для самых важных слов о нас с тобой. О том, как мы встретились, как развивались наши чувства, и о том, как сильно я тобой дорожу. Каждое мгновение рядом с тобой — это бесценный подарок.
+                        </p>
+                    </div>
+
+                    <div class="bento-card glass-card reasons-card">
+                        <div class="card-glow"></div>
+                        <h3>100 причин 💖</h3>
+                        <div class="reason-display-box">
+                            <p id="reason-text" class="card-desc">Нажми, чтобы заглянуть в моё сердце...</p>
+                        </div>
+                        <button id="next-reason-btn" class="action-btn small-btn">Узнать причину</button>
+                        <p id="reasons-counter" class="counter-text">Открыто: 0 / 100</p>
+                    </div>
+
+                    <div class="bento-card glass-card quote-card">
+                        <div class="card-glow"></div>
+                        <h3>Любимая цитата 💫</h3>
+                        <blockquote class="romantic-quote">
+                            «Любить — это не значит смотреть друг на друга, любить — значит вместе смотреть в одном направлении.»
+                            <span class="quote-author">— Антуан де Сент-Экзюпери</span>
+                        </blockquote>
+                    </div>
+
+                    <div class="bento-card glass-card quiz-card">
+                        <div class="card-glow"></div>
+                        <h3>Викторина о нас 🧠</h3>
+                        <div id="quiz-container">
+                            <p id="quiz-question" class="card-desc">Готова проверить, как хорошо ты помнишь наши моменты?</p>
+                            <div id="quiz-options" class="quiz-options"></div>
+                            <button id="start-quiz-btn" class="action-btn small-btn">Начать тест</button>
+                        </div>
+                    </div>
+
+                    <div class="bento-card glass-card span-2 timeline-card">
+                        <div class="card-glow"></div>
+                        <h3>Наш путь 📍</h3>
+                        <div class="timeline">
+                            <div class="timeline-item glass-timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>День нашего знакомства</h4>
+                                <p>Встретил тебя на улице простой, и понял — это судьба.</p>
+                            </div>
+                            <div class="timeline-item glass-timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Первая долгая беседа</h4>
+                                <p>Болтали с вечера до самого утра, провожая закат и встречая рассвет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bento-card">
+                        <h3>Маленькая мысль 💭</h3>
+                        <p class="card-desc">Каждый день я благодарю судьбу за то, что ты есть в моей жизни.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="poems-tab" class="tab-content">
+                <div class="poems-list" id="poems-container">
+                    </div>
+            </section>
+
+            <section id="secret-tab" class="tab-content">
+                <div class="secret-tile glass-card">
+                    <div class="card-glow"></div>
+                    <h2 class="secret-title">Секретное письмо 💌</h2>
+                    
+                    <div id="password-screen" class="password-wrapper">
+                        <p class="card-desc">Это личное послание защищено паролем. Чтобы его открыть, тебе нужно разгадать мой шифр.</p>
+                        
+                        <div class="riddle-box" style="text-align: center;">
+                            <p class="riddle-title">✨ Подсказка-шифр ✨</p>
+                            <p style="color: var(--text-main); font-size: 1.05rem; margin-top: 8px;">
+                                В этом коде объединено то, с чего мы оба начались:
+                            </p>
+                            <p style="font-family: var(--font-header); font-size: 1.3rem; font-style: italic; color: var(--accent-color); margin: 12px 0;">
+                                « Ты знаешь ту цифру прекрасно, подсказка есть выше, собери все воедино. »
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">
+                                (4 символа подряд, без точек и пробелов)
+                            </p>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="secret-password" class="glass-input" placeholder="Введи 4 цифры...">
+                            <button id="unlock-secret-btn" class="action-btn small-btn">Открыть</button>
+                        </div>
+                        <p id="secret-error" class="error-text"></p>
+                    </div>
+                    
+                    <div id="secret-content" class="secret-content-wrapper">
+                        <div class="letter-text">
+                            <p>Моя любимая Анастасия,</p>
+                            <p>Если ты читаешь это, значит ты разгадала код. Я создал этот сайт, чтобы у тебя всегда было место, куда ты можешь прийти, если тебе грустно, или если меня нет рядом.</p>
+                            <p>Каждая строчка кода здесь написана с мыслями о тебе. Я хочу, чтобы ты знала: даже в самые темные времена я буду твоим светлым лучом. Спасибо тебе за то, что ты есть.</p>
+                            <p class="signature">Твой любимый парень,<br>Никита</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <button id="reaction-btn" class="reaction-btn glass-btn">❤️ Отправить реакцию Никите</button>
+            <p class="footer-credits">Создано с любовью специально для тебя<br><span>Никита Кулаго - Твой любимый парень</span></p>
+        </footer>
+    </div>
+
+    <div id="confetti-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
