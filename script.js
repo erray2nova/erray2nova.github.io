@@ -132,8 +132,8 @@ function initTabs() {
 
 function initTheme() {
     const themeBtn = document.getElementById('theme-toggle');
-    document.body.classList.add('dark-mode');
-    themeBtn.textContent = '☀️';
+    // document.body.classList.add('dark-mode'); // Удалено, теперь светлая по умолчанию
+    themeBtn.textContent = '🌙'; // Иконка луны, чтобы она могла переключить на темную
 
     themeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
